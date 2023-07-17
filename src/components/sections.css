@@ -1,0 +1,98 @@
+/* Top Section */
+.top-section {
+  @apply grid relative w-[75%];
+  @apply sm:grid-cols-1 sl:grid-cols-[50%_20%_20%] lg:grid-cols-[50%_20%_20%] xl:grid-cols-[50%_22%_20%] 2xl:grid-cols-[50%_25%_20%];
+  @apply w-[90%] xl:w-[75%] 2xl:w-[70%];
+  @apply gap-10 xl:gap-7 2xl:gap-10;
+}
+
+.right-section {
+  @apply flex gap-20;
+
+  > *:nth-child(1) {
+    @apply w-1/2 flex flex-col;
+  }
+
+  > *:nth-child(2) {
+    @apply w-1/2;
+  }
+}
+
+.offers {
+  @apply flex flex-col h-full gap-20;
+}
+
+.offer-item {
+  @apply flex flex-col gap-3;
+}
+
+/* Middle Section */
+
+.middle-section {
+  @apply grid grid-cols-3 w-[75%];
+  @apply w-[90%] xl:w-[75%] 2xl:w-[70%];
+  @apply gap-8 xl:gap-5 2xl:gap-8;
+}
+
+.content-left {
+  @apply grid col-span-2 grid-cols-[70%_27%] gap-8;
+}
+
+.choice-panel {
+  @apply h-full flex flex-col justify-between bg-secondary p-12 rounded-xxl gap-6;
+}
+
+.choice-text {
+  @apply flex flex-col gap-7;
+}
+
+.mid-bottom {
+  @apply grid grid-cols-5 w-[70%];
+  @apply w-[90%] xl:w-[75%] 2xl:w-[70%];
+  @apply gap-12 xl:gap-10 2xl:gap-12;
+}
+
+.support-text {
+  @apply flex col-span-2 items-center;
+}
+
+.middle-offers {
+  @apply gap-10 col-span-2 mr-10;
+}
+
+/* Bottom Section */
+.bottom-section {
+  @apply grid grid-cols-2 w-[75%];
+  @apply w-[90%] xl:w-[75%] 2xl:w-[70%];
+  @apply gap-40 xl:gap-32 2xl:gap-40;
+}
+
+.bottom-links {
+  @apply flex flex-col ml-12 gap-14;
+}
+
+.link-item {
+  @apply flex flex-col gap-3;
+}
+
+.link-item > ul {
+  @apply flex flex-wrap gap-3;
+}
+
+.link-item > ul > li {
+  @apply text-slate-500;
+}
+
+/* Footer */
+.footer {
+  @apply flex items-center justify-between mb-14;
+  @apply w-[90%] xl:w-[75%] 2xl:w-[70%];
+}
+
+.footer > a {
+  @apply underline hover:text-accent;
+}
+
+.footer-logo {
+  @apply flex gap-2 items-center;
+}

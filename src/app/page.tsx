@@ -1,14 +1,34 @@
+"use client"
+
+import { useRef } from "react";
+import dynamic from "next/dynamic";
+
+const BottomSection = dynamic(() => import("@/components/BottomSection"), {
+  ssr: false,
+});
+const Footer = dynamic(() => import("@/components/Footer"), {
+  ssr: false,
+});
+
 import TopSection from "@/components/TopSection";
-import BottomSection from "@/components/BottomSection";
 import MiddleSection from "@/components/MiddleSection";
-import { topSectionData, middleSectionData, bottomSectionData } from "@/data";
+import Header from "@/components/Header";
 
 export default function Home() {
+  const elementRef = useRef<null | HTMLDivElement>();
+
+  const handleScrollClick = () => {
+    console.log('i am here')
+    elementRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <main className="main-container">
-      <TopSection data={topSectionData} />
-      <MiddleSection data={middleSectionData} />
-      <BottomSection data={bottomSectionData} />
+      <Header />
+      <TopSection handleScrollClick={handleScrollClick} />
+      <MiddleSection ref={elementRef} />
+      <BottomSection />
+        <Footer />
     </main>
   );
 }

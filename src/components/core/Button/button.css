@@ -1,0 +1,7 @@
+.button {
+  @apply w-full text-center px-6 py-4 bg-accent rounded-full text-primary cursor-pointer;
+}
+
+.button-outline {
+  @apply text-accent bg-transparent border-accent border;
+}

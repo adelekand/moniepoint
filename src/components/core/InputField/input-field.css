@@ -1,0 +1,7 @@
+.input-field {
+  @apply flex flex-col w-full gap-2;
+}
+
+.input-field > input {
+  @apply bg-secondary py-3 px-4 rounded-full;
+}

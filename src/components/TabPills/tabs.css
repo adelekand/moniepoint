@@ -1,0 +1,15 @@
+.tabs {
+  @apply flex flex-col gap-6 mt-8;
+}
+
+.tab-pills {
+  @apply flex gap-5;
+}
+
+.tab-item {
+  @apply bg-secondary cursor-pointer py-1 px-3 rounded-full;
+}
+
+.active-tab {
+  @apply bg-white text-primary;
+}

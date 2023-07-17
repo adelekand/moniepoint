@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-[#0e1e2f] to-primary via-[#0E1420] via-20% font-Poppins text-white;
+  }
+}
+
 * {
   box-sizing: border-box;
+
 }
 
 body {
@@ -11,132 +20,33 @@ body {
   padding: 0;
 }
 
+h1, h2 {
+  @apply font-Francois;
+}
+
 @layer components {
-  /* Typography styles */
-  .heading1,
-  .heading2,
-  .heading3 {
-    @apply font-semibold font-plantin text-primaryBlack;
-  }
 
-  .heading1 {
-    @apply text-4xl sm:text-5xl md:text-3xl lg:text-4xl xl:text-5xl text-center md:text-left;
-  }
-  .heading2 {
-    @apply text-3xl sm:text-2xl;
-  }
-  .heading3 {
-    @apply text-lg sm:text-base;
-  }
+  /* Button */
+  @import url('../components/core/Button/button.css');
 
-  .p-lg,
-  .p-md,
-  .p-sm,
-  .p-xs {
-    @apply text-tintOneBlack font-grtskpeta;
-  }
+  /* Typography */
+  @import url('../components/core/Typography/typography.css');
 
-  .p-lg {
-    @apply text-xl sm:text-2xl md:text-base lg:text-xl xl:text-3xl text-center md:text-left;
-  }
-  .p-md {
-    @apply text-lg sm:text-base;
-  }
-  .p-sm {
-    @apply text-base sm:text-base;
-  }
-  .p-xs {
-    @apply text-xs sm:text-xs xl:text-xs 2xl:text-sm;
-  }
+  /* TextInput */
+  @import url('../components/core/InputField/input-field.css');
 
-  .main-container {
-    @apply flex flex-col w-full items-center mt-14 gap-28;
-  }
+  /* Common */
+  @import url('../components/common.css');
 
-  /* Top Section */
-  .top-section {
-    @apply flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-between items-center w-[90%] sm:w-[90%] md:w-[85%] lg:w-[85%] xl:w-[75%];
+  /* Slider */
+  @import url('../components/Slider/slider.css');
 
-    > *:nth-child(1) {
-      @apply w-full md:w-col-2 lg:w-col-2 xl:w-col-2;
-    }
+  /* Navbar  */
+  @import url('../components/Navbar/navbar.css');
 
-    > *:nth-child(2) {
-      @apply w-full md:w-col-2 lg:w-col-2 xl:w-col-3;
-    }
-  }
+  /* Page section */
+  @import url('../components/sections.css');
 
-  .banner {
-    @apply flex flex-col gap-6;
-  }
-
-  .button {
-    @apply w-full sm:w-fit sm:self-center md:self-start text-center px-6 py-2 bg-primaryBlack hover:bg-tintOneBlack text-white;
-  }
-
-  .poster-card {
-    @apply flex flex-col h-fit bg-tintGold items-center pb-8 mt-20 md:mt-0;
-  }
-
-  .wallet {
-    @apply w-10/12 h-fit object-contain -mt-16;
-  }
-
-  .top-section-price {
-    @apply flex flex-col items-center mb-8;
-  }
-
-  .top-pricing-amount {
-    @apply text-7xl font-grtskexa font-bold -mt-6;
-  }
-
-  .services {
-    @apply flex flex-col gap-1 mb-8;
-
-    > li {
-      @apply flex gap-3 items-center;
-    }
-
-    > li > * {
-      @apply text-tintOneBlack;
-    }
-  }
-
-/* Middle Section */
-  .middle-section {
-    @apply flex flex-col gap-6 items-center w-[90%] sm:w-[90%] md:w-[85%] lg:w-[85%] xl:w-[75%];
-  }
-
-  .tintedBlack {
-    @apply text-tintTwoBlack text-center;
-  }
-
-  /* Bottom Section */
-  .bottom-section {
-    @apply flex flex-col gap-4 items-center w-full min-h-[400px] bg-tintGold py-28;
-  }
-
-  .content {
-    @apply flex flex-col items-center w-[90%] sm:w-[90%] md:w-[85%] lg:w-[85%] xl:w-[75%];
-  }
-
-  .flag {
-    @apply w-full h-fit object-contain;
-  }
-
-  .bottom-section-price {
-    @apply flex items-center mt-6 mb-4;
-  }
-
-  .price-content {
-    @apply flex flex-col;
-
-    > h1 {
-      @apply text-2xl text-left font-grtskexa font-bold;
-    }
-
-    > p {
-      @apply text-primaryBlack font-bold;
-    }
-  }
+  /* Tabs */
+  @import url('../components/TabPills/tabs.css');
 }

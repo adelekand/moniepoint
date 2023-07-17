@@ -1,0 +1,11 @@
+export const HORIZONTAL_VALUE = 200;
+export const ROTATE = [0, 180, 360];
+export const EASE_IN_OUT = "easeInOut";
+export const BACK_IN = "backIn";
+export const BACK_OUT = "backOut";
+export const BEFORE_CHILDREN = "beforeChildren";
+export const THREE_MS = 0.3;
+export const FIVE_MS = 0.5;
+export const SEVEN_MS = 0.7;
+export const DIRECTION_OFFSET = 1000;
+export const SLIDER_TIMEOUT = 4000;

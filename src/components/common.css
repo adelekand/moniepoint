@@ -1,0 +1,41 @@
+.pills {
+  @apply w-fit text-center px-6 py-5 bg-primary text-white font-medium rounded-full absolute bottom-6 left-6;
+}
+
+.asterisk {
+  @apply flex w-max p-1 bg-white rounded-full
+}
+
+.scroll {
+  @apply flex w-max px-1 py-12 bg-gradient-to-b from-[#0C131E] bg-slate-900 rounded-full;
+}
+
+.rounded-image {
+  @apply w-full h-full rounded-full object-cover;
+
+}
+
+.sphere-image {
+  @apply h-full;
+  transform-origin: bottom center;
+}
+
+.labeled-image-container {
+  @apply relative h-full;
+}
+
+.labeled-image {
+  @apply w-full h-full rounded-xxl object-cover;
+}
+
+.image-shadow {
+  @apply shadow-[rgb(66,86,119)] shadow-[4px_3px_55px_4px];
+}
+
+.main-container {
+  @apply flex flex-col w-full items-center gap-36 pt-14;
+}
+
+.calculator {
+  @apply grid grid-cols-2 gap-5;
+}

@@ -1,0 +1,21 @@
+ /* Slider */
+ .slider-container {
+  @apply flex flex-col mt-24 mr-5 gap-8;
+}
+
+.slider {
+  @apply grid bg-secondary p-12 rounded-xxl gap-12;
+  @apply grid-cols-[30%_40%] sl:grid-cols-[30%_50%] lg:grid-cols-[30%_60%] 2xl:grid-cols-[30%_40%];
+}
+
+.dot-container {
+  @apply flex justify-center;
+}
+
+.dot {
+  @apply cursor-pointer w-2 h-2 rounded-full bg-white opacity-80;
+}
+
+.dot:not(:last-child) {
+  @apply mr-4;
+}

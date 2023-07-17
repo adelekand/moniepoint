@@ -1,34 +1,19 @@
-type Service = {
+export type OfferType = {
+  id: number,
+  text: string,
+  markdown?: boolean,
+}
+
+export type SliderContentType = {
   id: number,
   name: string,
+  position: string,
+  text: string,
+  image: string,
 }
 
-type TopSectionPricing = {
-  amount: string,
-  duration: string,
-  terms: string,
-}
-
-export interface TopSectionData {
-  bannerTitle: string;
-  subTitle: string;
-  services: Service[];
-  pricing: TopSectionPricing;
-}
-
-export interface MiddleSectionData {
-  title: string;
-  subTitle: string;
-}
-
-type BottomSectionPricing = {
-  amount: string,
-  tagLine: string,
-  terms: string,
-}
-
-export interface BottomSectionData {
-  title: string;
-  subTitle: string;
-  pricing: BottomSectionPricing;
+export type TabItemType = {
+  id: number,
+  title: string,
+  content: React.ReactNode,
 }

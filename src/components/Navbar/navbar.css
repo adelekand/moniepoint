@@ -1,0 +1,26 @@
+.header {
+  @apply flex justify-between items-center;
+  @apply w-[90%] xl:w-[75%] 2xl:w-[70%];
+}
+
+.logo {
+  @apply flex basis-[10%] mr-7;
+}
+
+.nav {
+  @apply basis-3/6 list-none inline-flex gap-12;
+  @apply gap-12 lg:gap-10 xl:gap-12;
+}
+
+.contact-link {
+  @apply w-fit h-fit bg-blue;
+  @apply px-20 lg:px-10 xl:px-20;
+}
+
+.nav li a {
+  @apply flex items-center gap-1 hover:text-accent;
+}
+
+.login-link {
+  @apply flex gap-4 items-center cursor-pointer hover:text-accent;
+}

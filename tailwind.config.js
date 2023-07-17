@@ -8,34 +8,30 @@ module.exports = {
   ],
   theme: {
     extend: {
-      width: {
-        "col-1": "calc(100% / 1.5)",
-        "col-2": "calc(100% / 2)",
-        "col-3": "calc(100% / 2.5)",
-        "col-4": "calc(100% / 3)",
-      },
       screens: {
-        sm: { min: "640px" },
-        md: { min: "768px" },
-        lg: { min: "1024px" },
-        xl: { min: "1280px" },
+        sl: '949px',
       },
       colors: {
-        // Black
-        richBlack: "#160D0B",
-        primaryBlack: "#201A19",
-        tintOneBlack: "#756C6A",
-        tintTwoBlack: "#BDB6B4",
-        tintThreeBlack: "#EEEAE9",
-
-        // Gold
-        tintGold: "#FFF7E7",
+        primary: "#0b0f17",
+        secondary: "#1f283d",
+        accent: "#ff6476",
+        blue: "#84d7e9",
       },
       fontFamily: {
-        grtskexa: ["var(--font-grtskexa)"],
-        grtskpeta: ["var(--font-grtskpeta)"],
-        plantin: ["var(--font-plantin)"],
+        Poppins: ["Poppins"],
+        Anton: ["Anton"],
+        Francois: ['Francois One'],
       },
+      fontSize: {
+        header_1: ['8.5rem'],
+        header_2: ['7.5rem'],
+        header_3: ['6.5rem'],
+        header_4: ['3.5rem'],
+        header_5: ['2.5rem'],
+      },
+      borderRadius: {
+        xxl: '4rem',
+      }
     },
   },
   plugins: [],

@@ -1,0 +1,27 @@
+.heading1,
+.heading2,
+.heading3 {
+  @apply font-semibold;
+}
+
+.bannerText {
+  @apply sm:!text-header_5 sl:!text-header_3 md:!text-header_4 lg:!text-header_3 xl:!text-header_2 2xl:!text-header_1;
+}
+
+.heading1 {
+  @apply text-8xl sl:text-6xl lg:text-7xl 2xl:text-8xl;
+}
+.heading2 {
+  @apply text-5xl;
+  @apply text-5xl sl:text-3xl lg:text-3xl 2xl:text-5xl;
+}
+.heading3 {
+  @apply text-lg;
+}
+
+.p-md {
+  @apply sm:text-sm md:text-xs lg:text-sm xl:text-base;
+}
+.p-sm {
+  @apply text-sm;
+}

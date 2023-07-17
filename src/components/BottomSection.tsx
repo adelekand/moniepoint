@@ -1,40 +1,54 @@
-import AmericanFlag from "./icons/AmericanFlag";
-import { BottomSectionData } from "@/types";
+"use client";
+
+import AnimatedContainer from "./AnimatedContainer";
+import BottomLinks from "./BottomLinks";
+import ScrollToView from "./ScrollToView";
+import TabPills from "./TabPills";
+import TravelCalculator from "./TravelCalculator";
 import { Typography } from "./core/Typography";
 
-interface BottomSectionProps {
-  data: BottomSectionData;
-}
-
-export default function BottomSection({ data }: BottomSectionProps) {
+const BottomSection = () => {
+  const tabs = [
+    {
+      id: 0,
+      title: "Travel",
+      content: <TravelCalculator />,
+    },
+    {
+      id: 1,
+      title: "Health",
+      content: <TravelCalculator />,
+    },
+    {
+      id: 2,
+      title: "CASCO",
+      content: <TravelCalculator />,
+    },
+    {
+      id: 3,
+      title: "Mortgage",
+      content: <TravelCalculator />,
+    },
+    {
+      id: 4,
+      title: "Fire",
+      content: <TravelCalculator />,
+    }
+  ];
   return (
-    <section className="bottom-section">
-      <div className="content">
-        <Typography variant="h2" text={data.title} />
-        <Typography
-          markdown
-          variant="md"
-          className="text-center"
-          text={data.subTitle}
-        />
-        <div className="bottom-section-price">
-          <AmericanFlag />
-          <div className="price-content">
-            <Typography
-            variant="h1"
-            className="bottom-pricing-amount"
-            text={data.pricing.amount}
-          />
-            <Typography variant="sm" text={data.pricing.tagLine} />
-          </div>
-        </div>
+    <AnimatedContainer delay={0.1} element="section" className="bottom-section">
+      <ScrollToView delay={0.2}>
+        <AnimatedContainer delay={0.2}>
+          <Typography variant="h1" className="heading2" text="Need numbers?" />
+        </AnimatedContainer>
+        <TabPills tabs={tabs} activeTabId={0} />
+      </ScrollToView>
 
-        <Typography
-          variant="md"
-          className="text-center"
-          text={data.pricing.terms}
-        />
-      </div>
-    </section>
+      <ScrollToView delay={0.5}>
+        <BottomLinks />
+      </ScrollToView>
+    </AnimatedContainer>
   );
 }
+
+export default BottomSection;

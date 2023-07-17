@@ -1,10 +1,8 @@
-import { twMerge } from "tailwind-merge";
 import "./globals.css";
-import { grtskexa, grtskpeta, plantin } from "@/utils/fonts";
 
 export const metadata = {
-  title: "NorthOne",
-  description: "We built the NorthOne Account to make starting a small business more accessible",
+  title: "Darcy's insurance products",
+  description: "",
 };
 
 export default function RootLayout({
@@ -12,14 +10,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const className = twMerge(
-    grtskexa.variable,
-    grtskpeta.variable,
-    plantin.variable
-  );
   return (
     <html lang="en">
-      <body className={className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
